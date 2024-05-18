@@ -1,0 +1,2 @@
+# Fastgpt-bingsearch-worker
+一个可以搭在cloudflareworkers上的bing接口
