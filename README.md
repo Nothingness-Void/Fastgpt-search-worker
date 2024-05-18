@@ -26,4 +26,10 @@
 - 如果返回了搜索内容
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/5b3f4375-d790-49c8-a991-f69aa718fdb2)
 - 则代表API正常
-- 即可将Custom Configuration ID和Subscription Key分别填入代码的第三行和第一行的留空中，然后部署到cloudflareworkers即可使用
+- 即可将Custom Configuration ID和Subscription Key先复制下来保存
+- 复制workers.js里的代码，粘贴到cloudflare woekers里
+- 并分别填入刚才复制的值到代码的第三行和第一行的留空中
+- 部署该js即可使用
+- FastGPT里http调用模块配置如下，其中链接填自己的wokers部署域名即可
+- ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/e3f0da8a-4a98-4d6e-a608-d316c926f6d3)
+
