@@ -1,4 +1,4 @@
-# Fastgpt-bingsearch-worker
+# Fastgpt-search-worker
 一个可以搭在cloudflareworkers上的bing搜索接口和DuckDuckGo搜索接口。
 
 <details>
