@@ -50,4 +50,5 @@
 ### 3.配置FastGPT
 - FastGPT里http调用模块配置如下，其中链接填自己的wokers部署域名即可
 - Body部分填写```{ "searchKey": "{{Prompt}},"maxResults": 5" }```
+- MaxResults填写你希望返回的结果数量
 </details>
