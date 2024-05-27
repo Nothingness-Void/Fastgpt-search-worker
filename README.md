@@ -1,10 +1,10 @@
 # Fastgpt-bingsearch-worker
-一个可以搭在cloudflareworkers上的bing接口
+一个可以搭在cloudflareworkers上的bing搜索接口和DuckDuckGo搜索接口。
 
+<details>
+  <summary>Bing教程</summary>
 
-## 教程
-
-### 1.申请Azure学生100USD账号/Azure免费200USD账号
+  ### 1.申请Azure学生100USD账号/Azure免费200USD账号
 - 教程网上一搜一堆，这里不再赘述
 
 ### 2.申请BingAPI
@@ -19,8 +19,6 @@
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/6879b1d5-6ad2-45c1-98d8-c742e40ebc6e)
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/5f562f4b-0c6b-4018-85c3-8d2768cda1da)
 
-
-
 - 回到申请BIngAPI界面，将API粘贴进去 并在QUery里面输入要搜索的内容点击Call
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/f17d2569-2ee3-4c42-b4a4-d9ab04540b19)
 - 如果返回了搜索内容
@@ -30,6 +28,20 @@
 - 复制workers.js里的代码，粘贴到cloudflare woekers里
 - 并分别填入刚才复制的值到代码的第三行和第一行的留空中
 - 部署该js即可使用
+
+### 3.配置FastGPT
 - FastGPT里http调用模块配置如下，其中链接填自己的wokers部署域名即可
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/e3f0da8a-4a98-4d6e-a608-d316c926f6d3)
 
+</details>
+
+<details>
+  <summary>DuckDuckGo教程（施工中）</summary>
+
+### 1.搭建DuckDuckGo搜索接入点
+- 参考https://github.com/binjie09/duckduckgo-api自行搭建
+
+### 2.配置
+
+
+</details>
