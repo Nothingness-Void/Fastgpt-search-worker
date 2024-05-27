@@ -32,6 +32,12 @@
 ### 3.配置FastGPT
 - FastGPT里http调用模块配置如下，其中链接填自己的wokers部署域名即可
 - ![image](https://github.com/Nothingness-Void/Fastgpt-bingsearch-worker/assets/55913486/e3f0da8a-4a98-4d6e-a608-d316c926f6d3)
+- Body部分填写
+  ```
+{
+  "searchKey": "{{Prompt}}"
+}
+  ```
 
 </details>
 
