@@ -37,7 +37,6 @@
 {
   "searchKey": "{{Prompt}}"
 }
-  ```
 
 </details>
 
