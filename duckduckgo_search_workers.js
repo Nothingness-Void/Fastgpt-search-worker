@@ -1,4 +1,4 @@
-const baseurl = 'https://xxx.xxx/search'; //搭建好的DuckDuckGO的搜索链接 要带着/search
+const baseurl = 'https://xxx.xxx.xxx/search'; //搭建好的搜索服务地址 要带着/search
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
@@ -11,7 +11,7 @@ addEventListener('fetch', event => {
  * @returns {Promise<Response>} - 返回搜索结果
  */
 async function handleRequest(request) {
-  const { searchKey } = await request.json();
+  const { searchKey, maxResults } = await request.json();
 
   if (!searchKey) {
     return new Response(JSON.stringify({
@@ -22,7 +22,12 @@ async function handleRequest(request) {
   }
 
   try {
-    const response = await fetch(`${baseurl}?q=${encodeURIComponent(searchKey)}`, {
+    const queryParams = new URLSearchParams({
+      q: searchKey,
+      max_results: maxResults || 10 // Default to 10 if maxResults is not provided
+    });
+
+    const response = await fetch(`${baseurl}?${queryParams.toString()}`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -40,7 +45,6 @@ async function handleRequest(request) {
   } catch (err) {
     return new Response(JSON.stringify({
       prompt: ''
- 
     }), {
       headers: { 'Content-Type': 'application/json' },
     });
